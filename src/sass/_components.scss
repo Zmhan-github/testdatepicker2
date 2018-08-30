@@ -1,4 +1,146 @@
-// HEADER
-.header {
-  background-color: tomato;
+.btn {
+  // == position
+  float: right;
+  margin: 35px 30px;
+
+  &,
+  &:link,
+  &:visited {
+    width: 320px;
+    height: 60px;
+    background-color: #e16640;
+    color: #fff;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    line-height: 60px;
+    display: inline-block;
+    border-radius: 60px;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(#e87b5a,.2);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(#ccc,.2);
+  }
+
+}
+
+
+.calendar {
+  width: 333px;
+  height: 330px;
+  float: left;
+
+  header {
+    display: block;
+    height: 25px;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+    text-align: center;
+    color: #333;
+
+    .day__month {
+      margin: 0 40.2px;
+    }
+
+  }
+
+  & > div {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    & > span {
+      width: 43.6px;
+      height: 50px;
+    }
+
+    & > span:nth-child(18) {
+      margin-top: 5px;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 80px;
+      background-color: #e16640;
+      color: #fff;
+    }
+  }
+
+  .day-header {
+    font-size: 13px;
+    line-height: 50px;
+    text-align: center;
+    color: #999;
+    text-transform: uppercase;
+  }
+
+  .day-layer {
+    opacity: 0.25;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 50px;
+    color: #444;
+  }
+
+  .day-now__month {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 50px;
+    color: #444;
+  }
+
+}
+
+
+.box-right {
+  float: left;
+  margin-left: 50px;
+  border: 1px solid #ccc;
+  width: 40%;
+
+  & > header {
+    display: flex;
+
+    & .title {
+      font-size: 16px;
+      font-weight: 300;
+      color: #333;
+      margin: 0 11px;
+
+      b {
+        margin-left: 7px;
+      }
+    }
+  }
+
+  & > div {
+    & .title {
+      margin-top: 30px;
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 0.2px;
+      color: #999;
+    }
+  }
 }

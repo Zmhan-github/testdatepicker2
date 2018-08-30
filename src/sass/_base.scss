@@ -9,10 +9,25 @@ body {
   height: 100%;
 }
 
+
+:root {
+  --yellow: #fecf33;
+  --light-orange: #fdbd39;
+  --peach: #ee6723;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 62.5%;
+  font-size: 62.5%; // 10px
   font-weight: 400;
   line-height: 1.6;
   overflow: hidden;
+  color: #333;
 }
+
+.container {
+  min-width: 1000px;
+  max-width: 1900px;
+  margin: 0 auto;
+}
+

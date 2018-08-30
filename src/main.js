@@ -1,5 +1,5 @@
 require('babel-runtime/regenerator');
 require('normalize.css');
-require('./stylus/main.styl');
+require('./sass/main.scss');
 require('./js/main.js');
 require('./index.pug');

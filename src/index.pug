@@ -7,6 +7,32 @@ html(lang="ru")
     title #{htmlWebpackPlugin.options.title}
   body
     .container
-      img(src=require('./images/user.jpg'), alt="user")
-      h1
-        | Hello Webpack!
+      .header
+        img(src=require('./images/back-white.svg'), alt="back-route")
+        h1 Ciel de Paris
+        span Table for 2, Today @ 19:00
+      .main
+        .calendar
+          header
+            span.prev <
+            span.day__month April 2017
+            span.next >
+          div
+            each val in ['Mo', 'Th', 'We', 'Th', 'Fr', 'Sa', 'Su']
+              span.day-header #{val}
+            - var n = 1, oldData = 27;
+            while oldData <= 31
+              span.day-layer #{oldData++}
+            while n <= 30
+              span.day-now__month #{n++}
+        .box-right
+          header
+            img(src=require('./images/group.svg'), alt="")
+            h2.title Table for
+              b 2 guests
+            img(src=require('./images/drop.svg'), alt="")
+          div
+            h2.title DINNER
+            div.box text
+      .footer
+        a.btn(href="#") update

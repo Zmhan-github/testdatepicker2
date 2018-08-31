@@ -1,8 +1,14 @@
 .header {
   padding: 31px 0 31px 28px;
-  height: 200px;
+  min-height: 200px; // origin
   background-image: linear-gradient(to bottom, rgba(61, 60, 59, 0.1), rgba(61, 60, 59, 0.5) 54%, rgba(61, 60, 59, 0.8));
   color: #fff;
+
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 50px 18px 18px 18px;
+    width: 375px;
+  }
 
   & > h1 {
     margin: 0;
@@ -10,28 +16,48 @@
     font-size: 3.6rem;
     font-weight: normal;
     letter-spacing: -0.2px;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 3.2rem;
+      line-height: 1.13;
+    }
   }
 
   & > span {
     opacity: 0.8;
-    font-size: 1.6rem;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
     line-height: 1.25;
     letter-spacing: normal;
     color: #999;
+    font-size: 1.6rem;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.4rem;
+      line-height: 1.43;
+      letter-spacing: -0.1px;
+      color: #fff;
+    }
   }
 }
 
 .main {
-  height: 440px;
   padding: 50px 70px;
   background-color: #fafafa;
   box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.05);
+  min-height: 440px; // origin
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 0 20px;
+    width: 375px;
+  }
 }
 
 .footer {
-  height: 130px;
+  min-height: 130px; // origin
   box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.05);
+  @media only screen and (max-width: $bp-small) {
+    width: 375px;
+    margin: 0 auto;
+  }
 }

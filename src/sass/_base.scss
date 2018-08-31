@@ -9,19 +9,16 @@ body {
   height: 100%;
 }
 
-
-:root {
-  --yellow: #fecf33;
-  --light-orange: #fdbd39;
-  --peach: #ee6723;
-}
+$bp-largest: 75em;    // 1200px;
+$bp-medium: 56.25em;  // 900px;
+$bp-small: 37.5em;    // 600px;
 
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 62.5%; // 10px
   font-weight: 400;
   line-height: 1.6;
-  overflow: hidden;
+  // overflow: hidden;
   color: #333;
 }
 
@@ -29,5 +26,10 @@ body {
   min-width: 1000px;
   max-width: 1900px;
   margin: 0 auto;
+
+  @media only screen and (max-width: $bp-small) {
+    min-width: 330px;
+    max-width: 375px;
+  }
 }
 
